@@ -1,10 +1,10 @@
-RZ/G2E EK874 Rev.A
+RZ/G2E EK874
 
 Intro
 =====
 
 This default configuration will allow you to start experimenting with the
-buildroot environment for the RZ/G2E EK874 Rev.A. With the current configuration
+buildroot environment for the RZ/G2E EK874. With the current configuration
 it will bring-up the board, and allow access through the serial console.
 
 How to build it
