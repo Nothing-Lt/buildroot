@@ -6,6 +6,7 @@
 [binaries]
 c = '@TARGET_CC@'
 cpp = '@TARGET_CXX@'
+g++ = '@TARGET_CXX@'
 ar = '@TARGET_AR@'
 strip = '@TARGET_STRIP@'
 cmake = '@BR2_CMAKE@'

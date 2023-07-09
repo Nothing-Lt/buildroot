@@ -1,0 +1,6 @@
+# From https://github.com/Nothing-Lt/libevl/archive/refs/tags/
+sha256  b033f607f4bb7ae0b40e3f6eef465f17a8aa4ebaf33e6b240ac32b6d899678b9  libevl-0.1.tar.gz
+sha512  a2f481217487599764c069c25e425147757804388e80956c80f0064b0cb1043164ddc6b0e8942a89ebaf5e6e01fda27b6d5d752e0ae38b8214c9f426c6c085eb  libevl-0.1.tar.gz
+
+# Hash for license files:
+sha256  865fa6f5bf6e7cecf61f7d6ab3e2966b381c7745324e83498c0fa559288fa260  LICENSE

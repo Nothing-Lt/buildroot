@@ -1,0 +1,6 @@
+config BR2_PACKAGE_LIBEVL
+	bool "libevl"
+	help
+	  libevl is a library for xenomai4 evl kernel 
+
+	  http://freedesktop.org/wiki/Software/libevdev/
