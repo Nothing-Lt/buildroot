@@ -3,11 +3,10 @@ BR2_arm=y
 BR2_cortex_a8=y
 BR2_ARM_FPU_VFPV3=y
 
-# Patches
-BR2_GLOBAL_PATCH_DIR="board/beaglebone/patches"
+BR2_TOOLCHAIN_BUILDROOT_CXX=y
 
-# Linux headers same as kernel, a 5.10 series
-BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_5_10=y
+# Linux headers same as kernel, a 6.1 series
+BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_6_1=y
 
 # System
 BR2_ROOTFS_DEVICE_CREATION_DYNAMIC_MDEV=y
@@ -20,11 +19,13 @@ BR2_ROOTFS_POST_SCRIPT_ARGS="-c board/beaglebone/genimage.cfg"
 # Kernel
 BR2_LINUX_KERNEL=y
 BR2_LINUX_KERNEL_CUSTOM_TARBALL=y
-BR2_LINUX_KERNEL_CUSTOM_TARBALL_LOCATION="$(call github,beagleboard,linux,5.10.162-ti-r59)/linux-5.10.162-ti-r59.tar.gz"
-BR2_LINUX_KERNEL_DEFCONFIG="omap2plus"
+BR2_LINUX_KERNEL_CUSTOM_TARBALL_LOCATION="$(call github,Nothing-Lt,linux-evl-61,423a0a81167a6d26861eade0265498189872cf4d)/linux-423a0a81167a6d26861eade0265498189872cf4d.tar.gz"
+BR2_LINUX_KERNEL_DEFCONFIG="multi_v7"
 BR2_LINUX_KERNEL_DTS_SUPPORT=y
 BR2_LINUX_KERNEL_INTREE_DTS_NAME="am335x-evm am335x-bone am335x-boneblack am335x-bonegreen am335x-evmsk am335x-boneblue am335x-boneblack-wireless am335x-bonegreen-wireless"
 BR2_LINUX_KERNEL_NEEDS_HOST_OPENSSL=y
+
+BR2_LINUX_KERNEL_CONFIG_FRAGMENT_FILES="board/beaglebone/linux-evl.config"
 
 # Filesystem
 BR2_TARGET_ROOTFS_EXT2=y
@@ -50,3 +51,11 @@ BR2_PACKAGE_HOST_MTOOLS=y
 # Supporting host tools to build FIT image
 BR2_PACKAGE_HOST_UBOOT_TOOLS=y
 BR2_PACKAGE_HOST_UBOOT_TOOLS_FIT_SUPPORT=y
+
+# For Xenomai4 evl test
+BR2_PACKAGE_STRESS=y
+BR2_PACKAGE_STRESS_NG=y
+BR2_PACKAGE_RT_TESTS=y
+
+# For Xenomain4 libevl
+BR2_PACKAGE_LIBEVL=y
